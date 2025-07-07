@@ -1,68 +1,44 @@
-# walmart_sales_data_analysis
+# 🛒 Walmart Sales Data Processing Project
 
-
-## Project Overview
-
-![Project Pipeline](https://github.com/najirh/Walmart_SQL_Python/blob/main/walmart_project-piplelines.png)
-## Requirements
-
-- **Python 3.8+**
-- **SQL Databases**: MySQL, PostgreSQL
-- **Python Libraries**:
-  - `pandas`, `numpy`, `sqlalchemy`, `mysql-connector-python`, `psycopg2`
-- **Kaggle API Key** (for data downloading)
-
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   ```
-2. Install Python libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up your Kaggle API, download the data, and follow the steps to load and analyze.
+## 📌 Project Overview
+This project demonstrates a basic data processing pipeline using Python to clean, transform, and store Walmart sales data into a MySQL database.
 
 ---
 
-## Project Structure
+## 📊 Key Features
 
-```plaintext
-|-- data/                     # Raw data and transformed data
-|-- sql_queries/              # SQL scripts for analysis and queries
-|-- notebooks/                # Jupyter notebooks for Python analysis
-|-- README.md                 # Project documentation
-|-- requirements.txt          # List of required Python libraries
-|-- main.py                   # Main script for loading, cleaning, and processing data
-```
----
-
-## Results and Insights
-
-This section will include your analysis findings:
-- **Sales Insights**: Key categories, branches with highest sales, and preferred payment methods.
-- **Profitability**: Insights into the most profitable product categories and locations.
-- **Customer Behavior**: Trends in ratings, payment preferences, and peak shopping hours.
-
-## Future Enhancements
-
-Possible extensions to this project:
-- Integration with a dashboard tool (e.g., Power BI or Tableau) for interactive visualization.
-- Additional data sources to enhance analysis depth.
-- Automation of the data pipeline for real-time data ingestion and analysis.
+- Reads raw CSV sales data (`Walmart.csv`)
+- Cleans and preprocesses the data:
+  - Removes duplicates and null values
+  - Converts price columns to numeric format
+  - Computes total sales per transaction
+- Saves the cleaned data to a new CSV file
+- Establishes a connection with a MySQL database
+- Uploads the final cleaned dataset to a table named `walmart` in the MySQL database
 
 ---
 
-## License
+## 🛠 Technologies Used
 
-This project is licensed under the MIT License. 
+- Python 🐍
+- pandas 📊
+- SQLAlchemy & PyMySQL 🔗
+- MySQL 🗃️
+- Jupyter Notebook 📒
+
+---
+
+## 📂 Files
+
+- `project.ipynb` - The Jupyter notebook with all data processing and database connection code.
+- `Walmart.csv` - Input raw data file.
+- `walmart_clean_data.csv` - Output cleaned dataset ready for storage.
 
 ---
 
-## Acknowledgments
+## 🚀 Getting Started
 
-- **Data Source**: Kaggle’s Walmart Sales Dataset
-- **Inspiration**: Walmart’s business case studies on sales and supply chain optimization.
+1. Install required packages:
 
----
+```bash
+pip install pandas sqlalchemy pymysql
